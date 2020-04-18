@@ -16,19 +16,34 @@ function write2(st)
 {
   for(var i=0;i<st.length;i++)
   {
-    var mark = "<tr> <td><strong>"+st[i].state+"</strong></td> <td>"+ st[i].confirmed +"</td> <td>"+ st[i].active +"</td> <td>"+st[i].recovered+"</td> <td>"+st[i].deaths+"</td> </tr>" ;
+    var mark = "<tr class = \"trow\"> <td><strong>"+st[i].state+"</strong></td> <td>"+ st[i].confirmed +"</td> <td>"+ st[i].active +"</td> <td>"+st[i].recovered+"</td> <td>"+st[i].deaths+"</td> </tr>" ;
     $("table").append(mark);
   }
   var row = $('tr');
-  for(var i=1;i<row.length;i++){
-    var cell = row.eq(i).find("td");
+  for(var i=0;i<row.length;i++){
+    var cell = row.eq(i+1).find("td");
     cell.eq(0).addClass("one");
-    var active = parseInt(st[i-1].deltaconfirmed) - parseInt(st[i-1].deltarecovered) - parseInt(st[i-1].deltadeaths);
-    cell.eq(1).append("<br> <span class = \"con \"> <i class = \"fa fa-caret-up \"> </i>" +st[i-1].deltaconfirmed + "</span>");
-    cell.eq(2).append("<br> <span class = \"act \"> <i class = \"fa fa-caret-up \"> </i>" +active + "</span>");
-    cell.eq(3).append("<br> <span class = \"rec \"> <i class = \"fa fa-caret-up \"> </i>" +st[i-1].deltarecovered + "</span>");
-    cell.eq(4).append("<br> <span class = \"dec \"> <i class = \"fa fa-caret-up \"> </i>" +st[i-1].deltadeaths + "</span>");
+    console.log(st);
+    var acti = parseInt(st[i].deltaconfirmed) - parseInt(st[i].deltarecovered) - parseInt(st[i].deltadeaths);
+    cell.eq(1).append("<br> <span class = \"con \"> <i class = \"fa fa-caret-up \"> </i>" +st[i].deltaconfirmed + "</span>");
+    cell.eq(2).append("<br> <span class = \"act \"> <i class = \"fa fa-caret-up \"> </i>" +acti + "</span>");
+    cell.eq(3).append("<br> <span class = \"rec \"> <i class = \"fa fa-caret-up \"> </i>" +st[i].deltarecovered + "</span>");
+    cell.eq(4).append("<br> <span class = \"dec \"> <i class = \"fa fa-caret-up \"> </i>" +st[i].deltadeaths + "</span>");
   }
+}
+function changeOrder(prop)
+{
+
+  console.log(prop);
+  $.getJSON("https://api.covid19india.org/data.json",function(data){
+
+    var states = data.statewise;
+
+    var st = states;
+    st.sort(sortByProperty(prop));
+
+    write2(st);
+  })
 }
 
 
