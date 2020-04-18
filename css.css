@@ -1,8 +1,19 @@
-img{
-  max-width: 75%;
-  max-height: 75%;
+body{
+  font-family: 'Josefin Sans', sans-serif;
 }
-
+h1,h2,h3{
+  font-weight: bold;
+}
+img{
+  max-width: 65%;
+  max-height: 65%;
+}
+.row{
+  margin-top: 80px;
+}
+#chartContainer{
+  height: 450px;
+}
 .con{
   color: red;
 }
@@ -20,10 +31,12 @@ img{
 .state-name{
   font-weight: bold;
 }
-
+tr{
+  border-bottom: 1px solid lightgrey;
+}
 td{
-  margin: auto;
-  text-align: center;
+
+  text-align: right;
 }
 .one{
   text-align: left;
@@ -35,19 +48,36 @@ button{
   font-weight: bold;
   margin-bottom: 15px;
 }
-th{
-  font-size: 1em;
-  letter-spacing:0.1em;
-  margin-bottom: 15px;
-  font-weight: lighter;
-  text-align: center;
+@media only screen and (min-width: 1000px) {
+  td{
+    font-size: 1.4em;
+  }
+  th{
+    font-size: 1.6em;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  td{
+    font-size: 1em;
+  }
+  th{
+    font-size: 1.4em;
+  }
+}
+@media only screen and (max-width: 750px) {
+  td{
+    font-size: 0.8em;
+  }
+  th{
+    font-size: 1em;
+  }
 }
 @media only screen and (max-width: 500px) {
   td{
     font-size: 0.8em;
   }
   th{
-    font-size: 0.8em;
+    font-size: 1em;
   }
 }
 @media only screen and (max-width: 400px) {
