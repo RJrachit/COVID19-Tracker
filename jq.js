@@ -12,57 +12,23 @@ function sortByProperty(property){
    }
 }
 
-function write(st){
-
-  $('.state-name').text("");
-  $('.state-confirmed').text("");
-  $('.state-active').text("");
-  $('.state-recovered').text("");
-  $('.state-deceased').text("");
-
+$('.act').on('click',function(){
+  sortByProperty('active');
+  write2(st);
+})
+function write2(st)
+{
   for(var i=0;i<st.length;i++)
   {
-    $('.state-name').append(st[i].state + '<br>');
-    $('.state-confirmed').append(st[i].confirmed + '<br>');
-    $('.state-active').append(st[i].active + '<br>');
-    $('.state-recovered').append(st[i].recovered + '<br>');
-    $('.state-deceased').append(st[i].deaths + '<br>');
+    var mark = "<tr> <td><strong>"+st[i].state+"</strong></td> <td>"+ st[i].confirmed +"</td> <td>"+ st[i].active +"</td> <td>"+st[i].recovered+"</td> <td>"+st[i].deaths+"</td> </tr>" ;
+    $("table").append(mark);
+  }
+  var row = $('tr');
+  for(var i=1;i<row.length;i++){
+    row.eq(i).find("td").eq(0).addClass("one");
   }
 }
 
-$('.con').on('click',function(){
-  $.getJSON("https://api.covid19india.org/data.json",function(data){
-    var states = data.statewise;
-    var st = states;
-    st.sort(sortByProperty("confirmed"));
-    write(st);
-  })
-});
-$('.act').on('click',function(){
-  $.getJSON("https://api.covid19india.org/data.json",function(data){
-    var states = data.statewise;
-    var st = states;
-    st.sort(sortByProperty("active"));
-    write(st);
-  })
-});
-$('.rec').on('click',function(){
-
-  $.getJSON("https://api.covid19india.org/data.json",function(data){
-    var states = data.statewise;
-    var st = states;
-    st.sort(sortByProperty("recovered"));
-    write(st);
-  })
-});
-$('.dec').on('click',function(){
-  $.getJSON("https://api.covid19india.org/data.json",function(data){
-    var states = data.statewise;
-    var st = states;
-    st.sort(sortByProperty("deaths"));
-    write(st);
-  })
-});
 
 $.getJSON("https://api.covid19india.org/data.json",function(data){
   // console.log(data);
@@ -78,5 +44,5 @@ $.getJSON("https://api.covid19india.org/data.json",function(data){
   st.sort(sortByProperty("confirmed"));
   console.log(st);
 
-  write(st);
+  write2(st);
 })
