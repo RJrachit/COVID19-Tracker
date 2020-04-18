@@ -7,33 +7,60 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="css.css">
     <title>Hello, world!</title>
   </head>
   <body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">COVID-19 India Tracker</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">More Information</a>
+          </li>
+
+      </div>
+    </nav>
+
 
 
     <!-- Display total cases -->
     <div class="container" align = 'center'>
       <div class="row">
 
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <div class="con col-lg-3 col-md-3 col-sm-6 col-xs-6">
           <h2>Confirmed</h2>
+          <img src="D:\GAMES\GitHub\Covid19 Tracker\RJrachit.github.io\Images\virus.png" alt=""><br>
           <h3 class = 'confirmed'></h3>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6"">
+        <div class= "act col-lg-3 col-md-3 col-sm-6 col-xs-6">
           <h2>Active</h2>
+          <img src="D:\GAMES\GitHub\Covid19 Tracker\RJrachit.github.io\Images\cough.png" alt=""><br>
           <h3 class = 'active'></h3>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6"">
+        <div class="rec col-lg-3 col-md-3 col-sm-6 col-xs-6">
           <h2>Recovered</h2>
+          <img src="D:\GAMES\GitHub\Covid19 Tracker\RJrachit.github.io\Images\heart.png" alt=""><br>
           <h3 class = 'recovered'></h3>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6"">
+        <div class="dec col-lg-3 col-md-3 col-sm-6 col-xs-6">
           <h2>Deceased</h2>
+          <img src="D:\GAMES\GitHub\Covid19 Tracker\RJrachit.github.io\Images\death.png" alt=""><br>
           <h3 class = 'deaths'></h3>
         </div>
 
@@ -43,46 +70,21 @@
 
 
     <!-- Statewise Cases  -->
-    <div class="according-to-state" align= 'left'>
-      <div class="row">
 
-          <div class=" col-lg-4 col-md-4 col-sm-4 col-4" align = "center">
-              <h4>State/UT</h4>
-              <div class="state-name">
+    <div class="according-to-state" >
+      <table align = "center">
+        <thead>
+          <th> States/UT</th>
+          <th><button type="button" name="button" class = 'con'> Confirmed</button</th>
+          <th><button type="button" name="button" class = 'act'> Active</button</th>
+          <th><button type="button" name="button" class = 'rec'> Recovered</button</th>
+          <th><button type="button" name="button" class = 'dec'> Deceased</button</th>
+        </thead>
 
-              </div>
-          </div>
-
-          <div class="col-lg-2 col-md-2 col-sm-2 col-2">
-            <a href="#"><h4 class = 'con'>Confirmed</h4></a>
-            <div class="state-confirmed ">
-
-            </div>
-          </div>
-
-          <div class=" col-lg-2 col-md-2 col-sm-2 col-2">
-            <a href="#"><h4 class = "act">Active</h4></a>
-            <div class="state-active ">
-
-            </div>
-          </div>
-
-          <div class=" col-lg-2 col-md-2 col-sm-2 col-2">
-            <a href="#"><h4 class = 'rec'>Recovered</h4></a>
-            <div class="state-recovered">
-
-            </div>
-          </div>
-
-          <div class=" col-lg-2 col-md-2 col-sm-2 col-2">
-            <a href="#"><h4 class = 'dec'>Deceased</h4></a>
-            <div class="state-deceased ">
-
-            </div>
-          </div>
-
-      </div>
+      </table>
     </div>
+
+
 
 
 

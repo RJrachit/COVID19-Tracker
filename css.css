@@ -1,0 +1,39 @@
+img{
+  max-width: 75%;
+  max-height: 75%;
+}
+
+.con{
+  color: red;
+}
+.act{
+  color: blue;
+}
+
+.rec{
+  color: green;
+}
+
+.dec{
+  color: yellow;
+}
+.state-name{
+  font-weight: bold;
+}
+
+td{
+  margin: 2px;
+  text-align: right;
+}
+.one{
+  text-align: left;
+}
+th{
+  font-size: 2em;
+}
+button{
+  background: white;
+  border: 0px;
+  text-align: left;
+  font-weight: bold;
+}
