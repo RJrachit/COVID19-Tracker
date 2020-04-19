@@ -4,6 +4,7 @@ body{
   font-size: 1.3em;
 }
 
+
 h1{
   font-weight: bold;
   margin-top: 14px;
@@ -22,10 +23,61 @@ h5{
 /* .navbar-dark .navbar-nav .active > .nav-link:hover{
   color: white;
 } */
-
 footer{
   height: 65px;
   color: white;
   padding-top: 17px;
   margin-top: 14px;
+}
+@media only screen and (min-width: 1000px) {
+  .vid{
+    height: 100%;
+    /* background: purple; */
+  }
+  iframe{
+    height:350px;
+    width: 75%;
+    border: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .vid{
+    height: 100%;
+    /* background: red; */
+  }
+  iframe{
+    height:300px;
+    width: 100%;
+    border: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .vid{
+    height: 100%;
+    /* background: blue; */
+  }
+  iframe{
+    height:250px;
+    width: 100%;
+    border: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .vid{
+    /* background: yellow; */
+    height: 100%;
+  }
+  iframe{
+    height:auto;
+    width: auto;
+    border: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
