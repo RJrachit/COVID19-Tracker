@@ -1,0 +1,31 @@
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  background: #f7f7f7;
+  font-size: 1.3em;
+}
+
+h1{
+  font-weight: bold;
+  margin-top: 14px;
+}
+h5{
+  font-weight: bolder;
+}
+.grey{
+  background-color: #ececec;
+  padding: 2px;
+}
+
+.section-2{
+  margin-top: 55px;
+}
+/* .navbar-dark .navbar-nav .active > .nav-link:hover{
+  color: white;
+} */
+
+footer{
+  height: 65px;
+  color: white;
+  padding-top: 17px;
+  margin-top: 14px;
+}

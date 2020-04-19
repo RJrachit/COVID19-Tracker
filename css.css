@@ -1,6 +1,7 @@
 body{
   font-family: 'Josefin Sans', sans-serif;
   background: #f7f7f7;
+  font-size: 1.3em;
 }
 h2,h3{
   font-weight: bold;
@@ -79,6 +80,13 @@ button{
   margin-bottom: 15px;
   background: #f7f7f7;
 }
+footer{
+  height: 65px;
+  color: white;
+  padding-top: 17px;
+  margin-top: 14px;
+}
+
 @media only screen and (min-width: 1000px) {
   td{
     font-size: 1.4em;
