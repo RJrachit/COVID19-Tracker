@@ -4,7 +4,9 @@ body{
   font-size: 1.3em;
 }
 
-
+#head{
+  margin-top: 70px;
+}
 h1{
   font-weight: bold;
   margin-top: 14px;
@@ -17,9 +19,7 @@ h5{
   padding: 2px;
 }
 
-.section-2{
-  margin-top: 55px;
-}
+
 /* .navbar-dark .navbar-nav .active > .nav-link:hover{
   color: white;
 } */
